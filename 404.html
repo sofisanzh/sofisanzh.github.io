@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#09070d">
+  <title>Page not found — Sofiia Sanzharovska</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --black: #09070d;
+      --ink: #faf8ff;
+      --muted: #aaa2b5;
+      --violet: #7c3cff;
+      --violet-soft: #b99aff;
+      --lime: #d7ff63;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 74% 18%, rgb(124 60 255 / 34%), transparent 32rem),
+        var(--black);
+      color: var(--ink);
+      font-family: Inter, Avenir, "Avenir Next", system-ui, sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: min(74vw, 58rem);
+      aspect-ratio: 1;
+      right: -20%;
+      top: -45%;
+      border: 1px solid rgb(215 255 99 / 18%);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 4.5rem rgb(124 60 255 / 7%),
+        0 0 0 9rem rgb(215 255 99 / 3%);
+      animation: orbit 22s linear infinite;
+      pointer-events: none;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 3rem, 72rem);
+      min-height: min(78vh, 43rem);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: clamp(2rem, 5vw, 4.5rem);
+      border: 1px solid rgb(255 255 255 / 14%);
+      border-radius: 1.5rem;
+      background: rgb(14 10 20 / 80%);
+      box-shadow: 0 2rem 8rem rgb(0 0 0 / 48%);
+      backdrop-filter: blur(20px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.86rem;
+      font-weight: 750;
+      letter-spacing: -0.015em;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 2.7rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #2d1d4a;
+      color: var(--lime);
+      font-family: Georgia, serif;
+      font-size: 1.7rem;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .content {
+      align-self: center;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: clamp(2rem, 6vw, 7rem);
+      padding-block: 3rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 1.1rem;
+      color: var(--lime);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 11ch;
+      margin: 0;
+      font-size: clamp(3.8rem, 9vw, 8.2rem);
+      font-weight: 500;
+      letter-spacing: -0.07em;
+      line-height: 0.88;
+    }
+
+    h1 em {
+      color: var(--violet-soft);
+      font-family: Georgia, serif;
+      font-weight: 400;
+    }
+
+    .error-code {
+      align-self: start;
+      color: rgb(255 255 255 / 6%);
+      font-family: Georgia, serif;
+      font-size: clamp(8rem, 24vw, 19rem);
+      font-style: italic;
+      letter-spacing: -0.1em;
+      line-height: 0.7;
+      user-select: none;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgb(255 255 255 / 14%);
+    }
+
+    .footer p {
+      max-width: 35rem;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4rem;
+      min-height: 3.25rem;
+      padding: 0.85rem 1.45rem;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #21152f;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 0.8rem 2.5rem rgb(215 255 99 / 20%);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
+    }
+
+    @keyframes orbit { to { transform: rotate(360deg); } }
+
+    @media (max-width: 48rem) {
+      main {
+        width: min(100% - 1.5rem, 72rem);
+        min-height: calc(100vh - 1.5rem);
+        padding: 1.5rem;
+      }
+
+      .content { grid-template-columns: 1fr; align-items: start; }
+      .error-code { position: absolute; right: 1rem; top: 42%; z-index: -1; }
+      .footer { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand" aria-label="Sofiia Sanzharovska">
+      <span class="mark" aria-hidden="true">s.</span>
+      <span>Sofiia Sanzharovska</span>
+    </div>
+
+    <div class="content">
+      <div>
+        <p class="eyebrow">Page not found</p>
+        <h1>Wrong turn.<br><em>Better direction.</em></h1>
+      </div>
+      <span class="error-code" aria-hidden="true">404</span>
+    </div>
+
+    <div class="footer">
+      <p>The page may have moved, changed its name, or no longer exist. Return to the portfolio homepage to continue exploring the work.</p>
+      <a class="button" href="/">Back to homepage <span aria-hidden="true">↗</span></a>
+    </div>
+  </main>
+</body>
+</html>
